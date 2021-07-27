@@ -18,4 +18,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          ENVIRONMENT_VARIABLE_NAME: ${{secrets.APP}}
+          ENVIRONMENT_VARIABLE_NAME: ${{secrets.SONAR_TOKEN}}
