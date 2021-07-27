@@ -1,37 +1,3 @@
-// import React, { Component } from "react";
-// class ImageCard extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.imgRef = React.createRef();
-//   }
-//   state = {
-//     span: 0
-//   };
-//   componentDidMount() {
-//     // console.log("here" + JSON.stringify(this.imgRef));
-//     this.imgRef.current.addEventListener("load", this.setspan);
-//     //   console.log(this.imageRef.current.clientHeight);
-//     // });
-//   }
-//   setspan = () => {
-//     const height = this.imgRef.current.clientHeight;
-//     const span = Math.ceil(height / 10);
-//     this.setState({
-//       span
-//     });
-//   };
-//   render() {
-//     const { description, urls } = this.props.image;
-//     return (
-//       <div style={{ gridRowEnd: `span ${this.state.span}` }}>
-//         <img alt={description} src={urls.regular} ref={this.imgRef} />
-//       </div>
-//     );
-//   }
-// }
-
-// export default ImageCard;
-
 import React from "react";
 
 class ImageCard extends React.Component {
@@ -61,14 +27,14 @@ class ImageCard extends React.Component {
   onHoverHandle = () => {
     // debugger;
     this.setState({
-      url: this.props.image.urls.full
+      url: this.props.image.urls.full,
     });
     this.props.open(this.state.url);
   };
 
   render() {
     const { description, urls } = this.props.image;
-    console.log(urls)
+    console.log(urls);
     return (
       <div
         style={{
@@ -77,11 +43,10 @@ class ImageCard extends React.Component {
           overflow: "hidden",
           alignContent: "center",
           alignItems: "center",
-          marginRight: "2rem"
+          marginRight: "2rem",
         }}
       >
         <a href={this.state.url}>
-
           <img
             ref={this.imageRef}
             alt={description}
