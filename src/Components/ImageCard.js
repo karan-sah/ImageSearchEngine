@@ -5,7 +5,7 @@ class ImageCard extends React.Component {
     super(props);
 
     this.state = { spans: 0, url: "", open: null };
-
+    //wdfef
     this.imageRef = React.createRef();
   }
 
@@ -14,6 +14,8 @@ class ImageCard extends React.Component {
     this.imageRef.current.addEventListener("load", this.setSpans);
     //this.imageRef.current.addEventListener("onClick", this.onHoverHandle);
   }
+  // let's test the sonar smells capabilites
+  // let's test the sonar smells capabilites
   // let's test the sonar smells capabilites
   setSpans = () => {
     const height = this.imageRef.current.clientHeight;
