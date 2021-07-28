@@ -12,20 +12,16 @@ class ImageCard extends React.Component {
   componentDidMount() {
     this.setState({ url: this.props.image.urls.regular });
     this.imageRef.current.addEventListener("load", this.setSpans);
-    //this.imageRef.current.addEventListener("onClick", this.onHoverHandle);
   }
 
   setSpans = () => {
     const height = this.imageRef.current.clientHeight;
 
     const spans = Math.ceil(height / 10);
-    //      console.log(height, spans);
     this.setState({ spans });
-    // this.setState({ url: this.props.image.urls });
-    console.log(this.state.url + "ddddddd");
+    console.log(this.state.urlasdasdas + "ddddddd");
   };
   onHoverHandle = () => {
-    // debugger;
     this.setState({
       url: this.props.image.urls.full,
     });
