@@ -14,7 +14,7 @@ class ImageCard extends React.Component {
     this.imageRef.current.addEventListener("load", this.setSpans);
     //this.imageRef.current.addEventListener("onClick", this.onHoverHandle);
   }
-
+  // let's test the sonar smells capabilites
   setSpans = () => {
     const height = this.imageRef.current.clientHeight;
 
